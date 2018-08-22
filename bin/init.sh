@@ -39,6 +39,11 @@ if ! [ -x "$(command -v xcode-select)" ]; then
   exit 1
 fi
 
+if ! [ -x "$(command -v pip)" ]; then
+  echo "\n\n Please install pip [sudo easy_install pip] and re-run this init file"
+  exit 1
+fi
+
 if ! [ -x "$(command -v ansible-galaxy)" ]; then
   echo "\n\n Please install Ansible [sudo pip install ansible] and re-run this init file"
   exit 1
