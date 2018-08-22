@@ -1,4 +1,4 @@
-export PATH="/usr/local/sbin:/usr/local/bin/:/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin/:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
@@ -89,3 +89,6 @@ alias nginx.sites="cd /usr/local/etc/nginx/sites-available/"
 alias ls='ls -GFh'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
+LSCOLORS='gxBxhxDxfxhxhxhxhxcxcx'
+export CLICOLOR=1
+export LSCOLORS
