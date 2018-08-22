@@ -8,11 +8,6 @@ pass_mysql=root
 
 echo "Welcome "$user
 
-#if ! [ -x "$(command -v git)" ]; then
-#  echo 'Error: git is not installed.' >&2
-#  exit 1
-#fi
-
 root_folder="/Users/$user/Development"
 themes_folder="/Users/$user/themes"
 config_folder="/Users/$user/config"
@@ -40,8 +35,13 @@ if [ ! -d "$library_launch_folder" ]; then
 fi
 
 if ! [ -x "$(command -v xcode-select)" ]; then
-  echo "\n\nInstalling xcode..."
-  xcode-select --install
+  echo "\n\n Please install xcode [xcode-select --install] and re-run this init file"
+  exit 1
+fi
+
+if ! [ -x "$(command -v ansible-galaxy)" ]; then
+  echo "\n\n Please install Ansible [sudo pip install ansible] and re-run this init file"
+  exit 1
 fi
 
 read -p "Have you stop apachectl? [y/n] " -n 1 -r
@@ -53,14 +53,6 @@ else
     exit 1
 fi
 
-# install homebrew
-`which -s brew`
-if [[ $? != 0 ]]; then
-    echo "\n\nInstalling Homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-    echo "\n\nRunning Homebrew Updates..."
-    brew update && brew upgrade
-fi
-
-brew doctor
+echo "\n\nPlease install Ansible requirements [ansible-galaxy install -r requirements.yml]"
+echo "\nPlease rename custom.config.yml to config.yml and verify config files (dotfiles_repo_local_destination)"
+echo "\n\nPlease run Ansible Playbook [ansible-playbook main.yml -i inventory -K]"
