@@ -35,23 +35,23 @@ if [ ! -d "$library_launch_folder" ]; then
 fi
 
 if ! [ -x "$(command -v xcode-select)" ]; then
-  echo "\n\n Please install xcode [xcode-select --install] and re-run this init file"
+  echo "\n\n >> Please install xcode [xcode-select --install] and re-run this init file"
   exit 1
 fi
 
 if ! [ -x "$(command -v pip)" ]; then
-  echo "\n\n Please install pip [sudo easy_install pip] and re-run this init file"
+  echo "\n\n >> Please install pip [sudo easy_install pip] and re-run this init file"
   exit 1
 fi
 
 if ! [ -x "$(command -v ansible-galaxy)" ]; then
-  echo "\n\n Please install Ansible [sudo pip install ansible] and re-run this init file"
+  echo "\n\n >> Please install Ansible [sudo pip install ansible] and re-run this init file"
   exit 1
 fi
 
 read -p "Have you stop apachectl? [y/n] " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo '\nWell done!'
+    echo '\nWell done apachectl is down!'
 else
     echo 'sudo apachectl stop'
     echo 'sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null'
@@ -60,4 +60,15 @@ fi
 
 echo "\n\nPlease install Ansible requirements [ansible-galaxy install -r requirements.yml]"
 echo "\nPlease rename custom.config.yml to config.yml and verify config files (dotfiles_repo_local_destination)"
-echo "\n\nPlease run Ansible Playbook [ansible-playbook main.yml -i inventory -K]"
+echo "\nPlease run Ansible Playbook [ansible-playbook main.yml -i inventory -K]"
+
+echo "\nShow Library folder"
+chflags nohidden ~/Library
+echo "\nShow hidden files"
+defaults write com.apple.finder AppleShowAllFiles YES
+echo "\nShow path bar"
+defaults write com.apple.finder ShowPathbar -bool true
+echo "\nShow status bar"
+defaults write com.apple.finder ShowStatusBar -bool true
+
+exit 0
