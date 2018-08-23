@@ -9,7 +9,6 @@ configure_nginx: yes
 
 dotfiles_repo: https://github.com/danielebarbaro/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_home: "~"
 dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
 dotfiles_files:
   - .bash_profile
@@ -85,16 +84,13 @@ homebrew_cask_apps:
   - firefox
   - google-chrome
   - handbrake
-  - licecap
-  - limechat
-  - macvim
   - sequel-pro
   - skype
   - slack
   - spotify
   - sublime-text
   - transmit
-  - vagrant
+#  - vagrant
   - mysqlworkbench
   - phpstorm
   - postman
