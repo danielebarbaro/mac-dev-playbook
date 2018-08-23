@@ -3,9 +3,6 @@
 user=$(whoami)
 group=staff
 
-user_mysql=root
-pass_mysql=root
-
 echo "Welcome "$user
 
 root_folder="/Users/$user/Development"
@@ -61,8 +58,5 @@ fi
 echo "\n\nPlease install Ansible requirements [ansible-galaxy install -r requirements.yml]"
 echo "\nPlease rename custom.config.yml to config.yml and verify config files (dotfiles_repo_local_destination)"
 echo "\nPlease run Ansible Playbook [ansible-playbook main.yml -i inventory -K]"
-
-echo "\nShow Library folder"
-chflags nohidden ~/Library
 
 exit 0
