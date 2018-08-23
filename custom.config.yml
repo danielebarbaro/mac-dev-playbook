@@ -4,6 +4,7 @@ downloads: ~/.ansible-downloads/
 configure_dotfiles: yes
 configure_sudoers: yes
 configure_terminal: yes
+configure_finder: yes
 configure_osx: yes
 
 dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
@@ -117,8 +118,8 @@ osx_script: "~/.osx --no-restart"
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
 composer_packages:
-  - name: drush/drush
   - name: laravel/installer
+  - name: drush/drush
   #   state: present # present/absent, default: present
   #   version: "^8.1" # default: N/A
 gem_packages:
