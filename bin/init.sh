@@ -64,11 +64,5 @@ echo "\nPlease run Ansible Playbook [ansible-playbook main.yml -i inventory -K]"
 
 echo "\nShow Library folder"
 chflags nohidden ~/Library
-echo "\nShow hidden files"
-defaults write com.apple.finder AppleShowAllFiles YES
-echo "\nShow path bar"
-defaults write com.apple.finder ShowPathbar -bool true
-echo "\nShow status bar"
-defaults write com.apple.finder ShowStatusBar -bool true
 
 exit 0
