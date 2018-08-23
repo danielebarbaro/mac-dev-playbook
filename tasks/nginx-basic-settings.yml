@@ -31,21 +31,20 @@
 
 - name: Copy configurations
   copy:
-    src: /files/nginx/conf.d/
+    src: files/nginx/conf.d/
     dest: /usr/local/etc/nginx/conf.d/
-    remote_src: yes
     directory_mode: yes
 
 - name: Copy nginx.conf
   copy:
-    src: /files/nginx/nginx.conf
+    src: files/nginx/nginx.conf
     dest: /usr/local/etc/nginx/
-    remote_src: yes
+    directory_mode: yes
     group: admin
 
 - name: Copy mime.types
   copy:
-    src: /files/nginx/mime.types
+    src: files/nginx/mime.types
     dest: /usr/local/etc/nginx/
-    remote_src: yes
+    directory_mode: yes
     group: admin
