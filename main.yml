@@ -32,6 +32,7 @@
 
     - include_tasks: tasks/nginx-basic-settings.yml
       when: configure_nginx
+      tags: ['configure-nginx']
 
     - include_tasks: tasks/osx.yml
       when: configure_osx
