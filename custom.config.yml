@@ -4,21 +4,21 @@ downloads: ~/.ansible-downloads/
 configure_dotfiles: yes
 configure_sudoers: yes
 configure_terminal: yes
-configure_finder: yes
 configure_osx: yes
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/danielebarbaro/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
+dotfiles_home: "~"
 dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
 dotfiles_files:
-  - .bashrc
+  - .bash_profile
   - .gitignore
   - .gitconfig
   - .inputrc
   - .vimrc
+  - .osx
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
   - autoconf
   - bash
   - bash-completion
@@ -112,7 +112,7 @@ mas_installed_apps: []
 mas_email: ""
 mas_password: ""
 
-osx_script: "~/.osx --no-restart"
+osx_script: "~/.osx"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
