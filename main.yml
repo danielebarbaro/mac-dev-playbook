@@ -30,6 +30,9 @@
     - include_tasks: tasks/terminal.yml
       when: configure_terminal
 
+    - include_tasks: tasks/nginx-basic-settings.yml
+      when: configure_nginx
+
     - include_tasks: tasks/osx.yml
       when: configure_osx
       tags: ['osx']

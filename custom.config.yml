@@ -5,6 +5,7 @@ configure_dotfiles: yes
 configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
+configure_nginx: yes
 
 dotfiles_repo: https://github.com/danielebarbaro/dotfiles.git
 dotfiles_repo_accept_hostkey: yes

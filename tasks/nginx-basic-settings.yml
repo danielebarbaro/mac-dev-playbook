@@ -1,0 +1,48 @@
+---
+# Create nginx config
+- file:
+    name: Create sites-available folder
+    path: /usr/local/etc/nginx/sites-available
+    state: directory
+    mode: 0755
+    group: admin
+
+- file:
+    name: Create sites-enabled folder
+    path: /usr/local/etc/nginx/sites-enabled
+    state: directory
+    mode: 0755
+    group: admin
+
+- file:
+    name: Create conf.d folder
+    path: /usr/local/etc/nginx/conf.d
+    state: directory
+    mode: 0755
+    group: admin
+
+- file:
+    name: Create ssl folder
+    path: /usr/local/etc/nginx/ssl
+    state: directory
+    mode: 0755
+    group: admin
+
+- copy:
+    name: Copy configurations
+    src: /files/nginx/conf.d/
+    dest: /usr/local/etc/nginx/conf.d/
+    remote_src: yes
+    directory_mode: yes
+
+- copy:
+      src: /files/nginx/nginx.conf
+      dest: /usr/local/etc/nginx/
+      remote_src: yes
+      group: admin
+
+- copy:
+      src: /files/nginx/mime.types
+      dest: /usr/local/etc/nginx/
+      remote_src: yes
+      group: admin
