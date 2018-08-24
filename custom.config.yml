@@ -3,7 +3,6 @@ downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
 configure_sudoers: yes
-configure_terminal: yes
 configure_osx: yes
 configure_nginx: yes
 
@@ -14,8 +13,8 @@ dotfiles_files:
   - .bash_profile
   - .gitignore
   - .gitconfig
-  - .inputrc
   - .vimrc
+  - .bashrc
   - .osx
 
 homebrew_installed_packages:
@@ -57,7 +56,7 @@ homebrew_installed_packages:
   - redis
   - xdebug-osx
   - rename
-  - mysql
+  - mysql@5.7
   - libtiff
   - argon2
   - openjpeg
@@ -69,6 +68,9 @@ homebrew_installed_packages:
   - dnsmasq
   - httpd
   - supervisor
+  - php-code-sniffer
+  - php@5.6
+  - php@7.1
 
 homebrew_taps:
   - homebrew/core
@@ -83,13 +85,12 @@ homebrew_cask_apps:
   - dropbox
   - firefox
   - google-chrome
-  - handbrake
   - sequel-pro
   - skype
   - slack
   - spotify
   - sublime-text
-  - transmit
+#  - transmit
 #  - vagrant
   - mysqlworkbench
   - phpstorm
@@ -98,10 +99,9 @@ homebrew_cask_apps:
   - vlc
   - whatsapp
   - telegram
-  - rdm
   - ccleaner
-  - teamviewer
-  - filezilla
+#  - teamviewer
+#  - filezilla
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []

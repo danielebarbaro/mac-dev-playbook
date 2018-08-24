@@ -26,7 +26,7 @@ if [ ! -d "$config_folder" ]; then
 fi
 
 if ! [ -x "$(command -v xcode-select)" ]; then
-  printf "\n\n >> Please install xcode [xcode-select --install] and re-run this init file"
+  printf "\n\n >> Please install xcode [xcode-select --install && sudo xcodebuild -license accept] and re-run this init file"
   exit 1
 fi
 
@@ -50,5 +50,5 @@ else
 fi
 
 printf "\n\n Please install Ansible requirements [ansible-galaxy install -r requirements.yml]"
-printf "\n Please rename custom.config.yml to config.yml and verify config files (dotfiles_repo_local_destination)"
+printf "\n Please rename custom.config.yml to config.yml"
 printf "\n Please run Ansible Playbook [ansible-playbook main.yml -i inventory -K]"

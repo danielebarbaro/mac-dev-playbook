@@ -1,6 +1,5 @@
 ---
 # Create nginx config
-
 - name: Create sites-available folder
   file:
     path: /usr/local/etc/nginx/sites-available
