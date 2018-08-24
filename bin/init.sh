@@ -8,7 +8,6 @@ echo "Welcome "$user
 root_folder="/Users/$user/Development"
 themes_folder="/Users/$user/themes"
 config_folder="/Users/$user/config"
-library_launch_folder="~/Library/LaunchAgents"
 
 #create folders tree
 if [ ! -d "$root_folder" ]; then
@@ -24,11 +23,6 @@ fi
 if [ ! -d "$config_folder" ]; then
     printf "\nCreating folder $config_folder\n\n"
     mkdir -p $config_folder
-fi
-
-if [ ! -d "$library_launch_folder" ]; then
-    printf "\nCreating LaunchAgents folder\n\n"
-    mkdir -p $library_launch_folder
 fi
 
 if ! [ -x "$(command -v xcode-select)" ]; then
