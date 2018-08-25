@@ -40,6 +40,12 @@ if ! [ -x "$(command -v ansible-galaxy)" ]; then
   exit 1
 fi
 
+if ! [ -x "$(command -v sphp)" ]; then
+  printf "\n\n >> Add php brew Switcher"
+  curl -L https://gist.githubusercontent.com/rhukster/f4c04f1bf59e0b74e335ee5d186a98e2/raw > /usr/local/bin/sphp
+  chmod +x /usr/local/bin/sphp
+fi
+
 read -p "Have you stop apachectl? [y/n] " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     printf '\n Well done apachectl is down!'
