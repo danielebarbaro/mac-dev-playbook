@@ -115,6 +115,7 @@ osx_script: "~/.osx"
 # installed, eg. through homebrew.
 composer_packages:
   - name: laravel/installer
+  - name: squizlabs/php_codesniffer
   - name: drush/drush
   #   state: present # present/absent, default: present
   #   version: "^8.1" # default: N/A
