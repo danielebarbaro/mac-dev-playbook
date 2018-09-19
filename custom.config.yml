@@ -2,7 +2,7 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
-configure_sudoers: yes
+configure_sudoers: no
 configure_osx: yes
 configure_nginx: yes
 
@@ -54,7 +54,6 @@ homebrew_installed_packages:
   - gd
   - jpeg
   - redis
-  - xdebug-osx
   - rename
   - mysql@5.7
   - libtiff
