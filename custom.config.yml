@@ -55,6 +55,7 @@ homebrew_installed_packages:
   - jpeg
   - redis
   - rename
+  - thefuck
   - mysql@5.7
   - libtiff
   - argon2
@@ -89,7 +90,6 @@ homebrew_cask_apps:
   - slack
   - spotify
   - sublime-text
-#  - transmit
 #  - vagrant
   - mysqlworkbench
   - phpstorm
@@ -99,8 +99,8 @@ homebrew_cask_apps:
   - whatsapp
   - telegram
   - ccleaner
-#  - teamviewer
-#  - filezilla
+  - teamviewer
+  - filezilla
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
