@@ -3,7 +3,7 @@ downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
 configure_sudoers: no
-configure_osx: yes
+configure_osx: no
 configure_nginx: yes
 
 dotfiles_repo: https://github.com/danielebarbaro/dotfiles.git
@@ -85,12 +85,12 @@ homebrew_cask_apps:
   - dropbox
   - firefox
   - google-chrome
+  - iterm2
   - sequel-pro
   - skype
   - slack
   - spotify
   - sublime-text
-#  - vagrant
   - mysqlworkbench
   - phpstorm
   - postman
