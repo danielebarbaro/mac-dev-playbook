@@ -29,6 +29,7 @@ homebrew_installed_packages:
   - docker-machine-driver-xhyve
   - git
   - go
+  - homebrew/cask-fonts/font-menlo-for-powerline
   - gpg
   - hub
   - httpie
@@ -66,11 +67,10 @@ homebrew_installed_packages:
   - postgresql
   - phpunit
   - dnsmasq
-  - httpd
   - supervisor
   - php-code-sniffer
-  - php@5.6
   - php@7.1
+  - php@7.2
 
 homebrew_taps:
   - homebrew/core
@@ -101,6 +101,8 @@ homebrew_cask_apps:
   - ccleaner
   - teamviewer
   - filezilla
+  - iterm2
+  - cleanmymac
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
