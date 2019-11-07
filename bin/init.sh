@@ -30,8 +30,18 @@ if ! [ -x "$(command -v xcode-select)" ]; then
   exit 1
 fi
 
+if ! [ -x "$(command -v brew)" ]; then
+  printf "\n\n >> Please install brew [/usr/bin/ruby -e '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'] and re-run this init file"
+  exit 1
+fi
+
 if ! [ -x "$(command -v pip)" ]; then
   printf "\n\n >> Please install pip [sudo easy_install pip] and re-run this init file"
+  exit 1
+fi
+
+if ! [ -x "$(command -v ansible)" ]; then
+  printf "\n\n >> Please install ansible [brew install ansible] and re-run this init file"
   exit 1
 fi
 
@@ -58,3 +68,5 @@ fi
 printf "\n\n Please install Ansible requirements [ansible-galaxy install -r requirements.yml]"
 printf "\n Please rename custom.config.yml to config.yml"
 printf "\n Please run Ansible Playbook [ansible-playbook main.yml -i inventory -K]"
+
+printf "\n\n Want zsh? > https://gist.github.com/danielebarbaro/df96824b05a924a34269e38fc08e998d"
