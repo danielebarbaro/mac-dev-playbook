@@ -9,6 +9,9 @@ root_folder="/Users/$user/Development"
 themes_folder="/Users/$user/themes"
 config_folder="/Users/$user/config"
 
+vim_folder_backups="/Users/$user/.vim/backups"
+vim_folder_swaps="/Users/$user/.vim/swaps"
+
 #create folders tree
 if [ ! -d "$root_folder" ]; then
     printf "\nCreating folder $root_folder\n\n"
@@ -25,13 +28,23 @@ if [ ! -d "$config_folder" ]; then
     mkdir -p $config_folder
 fi
 
+if [ ! -d "$vim_folder_backups" ]; then
+    printf "\nCreating folder $vim_folder_backups\n\n"
+    mkdir -p $vim_folder_backups
+fi
+
+if [ ! -d "$vim_folder_swaps" ]; then
+    printf "\nCreating folder $vim_folder_swaps\n\n"
+    mkdir -p $vim_folder_swaps
+fi
+
 if ! [ -x "$(command -v xcode-select)" ]; then
   printf "\n\n >> Please install xcode [xcode-select --install && sudo xcodebuild -license accept] and re-run this init file"
   exit 1
 fi
 
 if ! [ -x "$(command -v brew)" ]; then
-  printf "\n\n >> Please install brew [/usr/bin/ruby -e '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'] and re-run this init file"
+  printf "\n\n >> Please install brew [/usr/bin/ruby -e \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"] and re-run this init file"
   exit 1
 fi
 

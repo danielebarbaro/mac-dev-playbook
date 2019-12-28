@@ -29,7 +29,6 @@ homebrew_installed_packages:
   - docker-machine-driver-xhyve
   - git
   - go
-  - homebrew/cask-fonts/font-menlo-for-powerline
   - gpg
   - hub
   - httpie
@@ -70,22 +69,23 @@ homebrew_installed_packages:
   - supervisor
   - php-code-sniffer
   - php@7.1
+  - php@7.3
   - php@7.2
+  - ruby
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
-  - caskroom/cask
-  - caskroom/versions/firefox-developer-edition
+  - firefox-developer-edition
   - docker
   - dropbox
   - firefox
   - google-chrome
-  - iterm2
   - sequel-pro
   - skype
   - slack
@@ -102,7 +102,6 @@ homebrew_cask_apps:
   - teamviewer
   - filezilla
   - iterm2
-  - cleanmymac
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -118,6 +117,7 @@ composer_packages:
   - name: laravel/installer
   - name: squizlabs/php_codesniffer
   - name: drush/drush
+  - name: hirak/prestissimo
   #   state: present # present/absent, default: present
   #   version: "^8.1" # default: N/A
 gem_packages:
